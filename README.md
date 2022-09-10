@@ -21,11 +21,16 @@ conf.ini 是工具的配置文件，可以用文本编辑器(记事本)打开，
 
 #### user_list.xlsx
 
-'user_list.xlsx' 的文件，是通过 adspower 导出的 excel。
+通过 adspower 导出的 excel。
 如图：
 ![ads导出](picture/adps-导出.png)
 其中，该 excel 有一列 id 列，是 adspower 指纹浏览器的账号 id ，读取该列，是为了每次通过程序加载 id 对其进行浏览器的操作。
 
+将文件名称改为：'user_list.xlsx'
+
 #### twitter_url.xlsx
+
+
+![Twitter关注者](picture/twitter-following.png)
 
 收录了区块链相关的知名作者，自动关注若开启，则会默认从中随机筛选进行账号关注
