@@ -1,4 +1,7 @@
-## 教程手册
+## 教程
+
+网页版教程地址：
+https://github.com/unlimitbladeworks/ads-auto
 
 ### auto-adspower
 
@@ -11,6 +14,9 @@
 - [x] twitter自动转推
 - [x] twitter自动关注
 
+#### premint 相关
+- [x] premint自动注册
+- [x] premint查询中奖记录
 
 ### 目录
 
@@ -34,3 +40,11 @@ conf.ini 是工具的配置文件，可以用文本编辑器(记事本)打开，
 ![Twitter关注者](picture/twitter-following.png)
 
 收录了区块链相关的知名作者，自动关注若开启，则会默认从中随机筛选进行账号关注
+
+
+
+#### 生成 exe 脚本命令
+
+```shell script
+pyinstaller -F -i girl.ico ads-auto.py
+```
