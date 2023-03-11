@@ -27,6 +27,9 @@ https://net.sjtu.edu.cn/info/1212/2723.htm#:~:text=%E8%BE%93%E5%85%A5%E2%80%9Ccm
 - [x] premint自动注册
 - [x] premint查询中奖记录
 
+### SUI测试网自动化
+- [x] 自动领水
+
 ### 目录
 
 
@@ -54,6 +57,31 @@ conf.ini 是工具的配置文件，可以用文本编辑器(记事本)打开，
 
 #### 生成 exe 脚本命令
 
+首先，用 pipenv 创建一个虚拟环境，这样打出来的包可以少很多依赖
 ```shell script
+mkdir ads
+cd ads
+pipenv install 
+
+pipfile的国内镜像源
+https://pypi.tuna.tsinghua.edu.cn/simple/
+
+pipenv install -r requirements.txt
+pipenv install pyinstaller
+```
+
+解决第三方加密库不存在的问题，修改库名称即可：
+![目录改为改为大写Crpto](picture/crpto.png)
+
+
+```shell script
+# 先激活虚拟环境，再去安装
+pipenv shell
+# 安装 requirements 文件库
+pipenv install -r requirements.txt
+# 不带图标的
+pyinstaller -F ads-auto.py
+# 带图标的
 pyinstaller -F -i girl.ico ads-auto.py
 ```
+
